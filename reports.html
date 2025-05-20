@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Ghazi Veterinary and Medical Store </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Ghazi Veterinary and Medical Store</div>
+        <div class="header-right">
+            <button class="hamburger" onclick="toggleSidebar()">☰</button>
+            <a href="#" onclick="logout()" class="logout-link">Logout</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <a href="index.html">Dashboard</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="billing.html">Billing</a>
+            <a href="customer.html">Customers</a>
+            <a href="reports.html" class="active">Reports</a>
+        </nav>
+        <main class="main-content">
+            <h1>Reports</h1>
+            <div class="stats-grid">
+                <div class="report-card">
+                    <h3>Total Medicines</h3>
+                    <p id="total-medicines">0</p>
+                </div>
+                <div class="report-card">
+                    <h3>Total Sales</h3>
+                    <p id="total-sales">0.00</p>
+                </div>
+                <div class="report-card">
+                    <h3>Total Customers</h3>
+                    <p id="total-customers">0</p>
+                </div>
+                <div class="report-card">
+                    <h3>Total Stock</h3>
+                    <p id="total-stock">0</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

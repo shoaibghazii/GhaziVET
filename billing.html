@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing - Ghazi Veterinary and Medical Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Ghazi Veterinary and Medical Store</div>
+        <div class="header-right">
+            <button class="hamburger" onclick="toggleSidebar()">☰</button>
+            <a href="#" onclick="logout()" class="logout-link">Logout</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <a href="index.html">Dashboard</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="billing.html" class="active">Billing</a>
+            <a href="customer.html">Customers</a>
+            <a href="reports.html">Reports</a>
+        </nav>
+        <main class="main-content">
+            <h1>Billing</h1>
+            <div class="form-container">
+                <h2>Create Bill</h2>
+                <div class="form-group">
+                    <label for="medicine">Select Medicine</label>
+                    <select id="medicine"></select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" placeholder="Enter quantity" min="1">
+                </div>
+                <button onclick="addToBill()">Add to Bill</button>
+                <p id="bill-error" class="error"></p>
+            </div>
+            <h2>Bill Summary</h2>
+            <table id="bill-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="bill-body"></tbody>
+            </table>
+            <p>Total: <span id="total">0.00</span></p>
+            <button onclick="completeBill()">Complete Bill</button>
+            <h2>Billing History</h2>
+            <div id="billing-history"></div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
